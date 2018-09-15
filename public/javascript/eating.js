@@ -31,6 +31,7 @@ $(document).ready(function () {
         }).then(function () {
             $("#notEaten").load(location.href + " #notEaten>*", "");
             $("#iAteThat").load(location.href + " #iAteThat>*", "");
+            $("#newFoodName").val("");
         });
     });
 });

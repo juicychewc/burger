@@ -33,11 +33,11 @@
         <div class="col m4 col-pad-top right">
             <ul class="collection with-header" id="iAteThat">
                 <li class="collection-header center-align">
-                    <h5 class="bold">Stuff You Already Ate</h5>
+                    <h5 class="bold" id="stomachHeader">Stuff You Already Ate</h5>
                 </li>
                 {{#each burgers}}
                 {{#if devoured}}
-                <li class="collection-item">
+                <li class="collection-item center-align">
                     {{burger_name}}
                 </li>
                 {{/if}}

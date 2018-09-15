@@ -17,6 +17,11 @@
     font-weight: bolder;
 }
 
+#stomachHeader {
+    color: red;
+    font-weight: bolder;
+}
+
 .clearfix::after {
     content: "";
     display: block;
