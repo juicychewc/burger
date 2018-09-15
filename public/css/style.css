@@ -1,0 +1,24 @@
+#background-color {
+    background-color: darkgoldenrod;
+}
+
+#burgerLogo {
+    width: 500px;
+    height: auto;
+}
+
+#appHeader {
+    color: white;
+    font-weight: bolder;
+}
+
+#menuHeader {
+    color: lime;
+    font-weight: bolder;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}

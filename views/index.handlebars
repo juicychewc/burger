@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="row wrapper center-align">
+        <div class="col s4 offset-s3 img-pad-top center-align">
+            <img id="burgerLogo" src="/images/catBurger.png">
+        </div>
+        <div class="col s4 offset-s4 center-align clearfix">
+            <h3 class="center-align" id="appHeader">Eat All the Things!</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col m4 col-pad-top left" id="menu">
+            <ul class="collection with-header center-align" id="notEaten">
+                <li class="collection-header center-align">
+                    <h5 class="bold" id="menuHeader">Stuff on the Menu</h5>
+                </li>
+                {{#each burgers}}
+                {{#unless devoured}}
+                <li class="collection-item">
+                    {{burger_name}}
+                    <br>
+                    <button class="btn waves-effect waves-dark devour" type="submit" name="action" data-id="{{id}}"
+                        data-eaten="{{devoured}}">
+                        Nom Nom Nom!
+                    </button>
+                </li>
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+
+
+        <div class="col m4 col-pad-top right">
+            <ul class="collection with-header" id="iAteThat">
+                <li class="collection-header center-align">
+                    <h5 class="bold">Stuff You Already Ate</h5>
+                </li>
+                {{#each burgers}}
+                {{#if devoured}}
+                <li class="collection-item">
+                    {{burger_name}}
+                </li>
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <form class="col s12 center-align" id="menuAdditionForm">
+            <div class="row">
+                <div class="input-field col s12" id="newFoodInput">
+                    <input placeholder="Add an Item to the Menu!" id="newFoodName" type="text" class="black-text">
+                </div>
+                <button class="btn waves-effect waves-light submit" id="newFoodSubmit" type="submit" name="burger_name">Add this Item<i class="material-icons right">restaurant</i></button>
+            </div>
+        </form>
+    </div>
